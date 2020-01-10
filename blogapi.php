@@ -65,7 +65,7 @@ if($validate->validateemail($post['email'])){//Validate Email here with an Outsi
                                 if ($select){
                    $code = "01"; $info = 'Email already Exist';}
                     else if( $registerUser = $class->insert("register","name,surname,email,password,user_id,time","'$name', '$surname','$email','$pass','$random','$time'")){
-                        $me = mail::Mailing('noreply@discuss.com','princelaw568@gmail.com','Welcome to Discuss',$mailMessage);//Calls the Mailling method to send mail to user
+                        $me = mail::Mailing('noreply@discuss.com',$email,'Welcome to Discuss',$mailMessage);//Calls the Mailling method to send mail to user
                         if($me){
                              $code = "00"; $info = "Sign up successfull";  
                         }
