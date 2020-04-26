@@ -7,9 +7,9 @@ class dbconn {
 
     public function connect() {
         $this->servername = "localhost";
-        $this->username = "id12032176_majornwa189";
-        $this->password = "P3et.4E9LQRKTUt";
-        $this->dbname = "id12032176_discuss";
+        $this->username = "root";
+        $this->password = "";
+        $this->dbname = "";
 
         //to return the db connection
         $conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname)or die(mysqli_connect_error());
